@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Brand -->
+    <color name="primary">#1A237E</color>
+    <color name="primary_dark">#0D1B5E</color>
+    <color name="primary_light">#283593</color>
+    <color name="accent">#00BCD4</color>
+    <color name="accent_light">#E0F7FA</color>
+
+    <!-- Surface -->
+    <color name="surface">#FFFFFF</color>
+    <color name="surface_variant">#F5F7FF</color>
+    <color name="background">#F0F2FF</color>
+    <color name="card_background">#FFFFFF</color>
+
+    <!-- Text -->
+    <color name="text_primary">#1A1A2E</color>
+    <color name="text_secondary">#5C6B9A</color>
+    <color name="text_hint">#9BA8C8</color>
+    <color name="text_on_primary">#FFFFFF</color>
+
+    <!-- Status -->
+    <color name="gain_green">#00897B</color>
+    <color name="gain_green_light">#E0F2F1</color>
+    <color name="loss_red">#E53935</color>
+    <color name="loss_red_light">#FFEBEE</color>
+    <color name="neutral">#5C6B9A</color>
+
+    <!-- Transaction types -->
+    <color name="buy_color">#1565C0</color>
+    <color name="buy_bg">#E3F2FD</color>
+    <color name="sell_color">#C62828</color>
+    <color name="sell_bg">#FFEBEE</color>
+    <color name="other_color">#E65100</color>
+    <color name="other_bg">#FFF3E0</color>
+
+    <!-- Chart colors -->
+    <color name="chart_mf">#3F51B5</color>
+    <color name="chart_equity">#00BCD4</color>
+    <color name="chart_fd">#FF9800</color>
+    <color name="chart_bond">#4CAF50</color>
+    <color name="chart_gold">#FFC107</color>
+
+    <!-- Divider -->
+    <color name="divider">#E8EAF6</color>
+    <color name="shadow">#1A1A237E</color>
+</resources>

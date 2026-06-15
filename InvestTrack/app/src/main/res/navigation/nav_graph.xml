@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/dashboardFragment">
+
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.investtrack.ui.dashboard.DashboardFragment"
+        android:label="Dashboard"
+        tools:layout="@layout/fragment_dashboard">
+        <action
+            android:id="@+id/action_dashboard_to_addAccount"
+            app:destination="@id/addAccountFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_dashboard_to_accounts"
+            app:destination="@id/dashboardFragment" />
+        <action
+            android:id="@+id/action_dashboard_to_accountDetail"
+            app:destination="@id/accountDetailFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="accountId"
+                app:argType="long" />
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/addAccountFragment"
+        android:name="com.investtrack.ui.accounts.AddAccountFragment"
+        android:label="Add Account"
+        tools:layout="@layout/fragment_add_account" />
+
+    <fragment
+        android:id="@+id/accountDetailFragment"
+        android:name="com.investtrack.ui.accounts.AccountDetailFragment"
+        android:label="Account Detail"
+        tools:layout="@layout/fragment_account_detail">
+        <argument
+            android:name="accountId"
+            app:argType="long" />
+        <action
+            android:id="@+id/action_accountDetail_to_addTransaction"
+            app:destination="@id/addTransactionFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="accountId"
+                app:argType="long" />
+        </action>
+        <action
+            android:id="@+id/action_accountDetail_to_folioDetail"
+            app:destination="@id/folioDetailFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right">
+            <argument
+                android:name="accountId"
+                app:argType="long" />
+            <argument
+                android:name="securityId"
+                app:argType="long" />
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/addTransactionFragment"
+        android:name="com.investtrack.ui.transactions.AddTransactionFragment"
+        android:label="Add Transaction"
+        tools:layout="@layout/fragment_add_transaction">
+        <argument
+            android:name="accountId"
+            app:argType="long" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/folioDetailFragment"
+        android:name="com.investtrack.ui.accounts.FolioDetailFragment"
+        android:label="Folio Detail"
+        tools:layout="@layout/fragment_folio_detail">
+        <argument
+            android:name="accountId"
+            app:argType="long" />
+        <argument
+            android:name="securityId"
+            app:argType="long" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/securitiesFragment"
+        android:name="com.investtrack.ui.securities.SecuritiesFragment"
+        android:label="Securities"
+        tools:layout="@layout/fragment_securities">
+        <action
+            android:id="@+id/action_securities_to_addSecurity"
+            app:destination="@id/addSecurityFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/addSecurityFragment"
+        android:name="com.investtrack.ui.securities.AddSecurityFragment"
+        android:label="Add Security"
+        tools:layout="@layout/fragment_add_security" />
+
+</navigation>

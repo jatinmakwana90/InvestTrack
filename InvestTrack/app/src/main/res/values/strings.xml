@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">InvestTrack</string>
+    <string name="nav_dashboard">Dashboard</string>
+    <string name="nav_accounts">Accounts</string>
+    <string name="nav_securities">Securities</string>
+    <string name="total_portfolio_value">Total Portfolio Value</string>
+    <string name="add_account">Add Account</string>
+    <string name="add_security">Add Security</string>
+    <string name="add_transaction">Add Transaction</string>
+    <string name="holdings">Holdings</string>
+    <string name="transactions">Transactions</string>
+    <string name="invested">Invested</string>
+    <string name="current_value">Current Value</string>
+    <string name="pnl">P&amp;L</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="no_securities">No securities added yet.\nTap + to add one.</string>
+    <string name="no_holdings">No holdings yet.\nAdd a transaction to get started.</string>
+</resources>
