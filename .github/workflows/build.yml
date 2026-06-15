@@ -29,20 +29,14 @@ jobs:
         run: chmod +x gradlew
 
       - name: Build Debug APK
-        run: ./gradlew assembleDebug --stacktrace 2>&1 | tee build_output.txt; grep "^e:" build_output.txt || true; exit ${PIPESTATUS[0]}
+        run: ./gradlew assembleDebug
+
+      - name: Find APK
+        run: find . -name "*.apk" 2>/dev/null
 
       - name: Upload APK
-        if: success()
         uses: actions/upload-artifact@v4
         with:
           name: InvestTrack-debug
-          path: app/build/outputs/apk/debug/app-debug.apk
+          path: ${{ github.workspace }}/app/build/outputs/apk/debug/app-debug.apk
           retention-days: 30
-
-      - name: Upload build log on failure
-        if: failure()
-        uses: actions/upload-artifact@v4
-        with:
-          name: build-error-log
-          path: build_output.txt
-          retention-days: 7
